@@ -5,7 +5,10 @@ import android.content.Context;
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
 import com.ibm.mobilefirstplatform.clientsdk.android.core.api.ResponseListener;
 import com.ibm.mobilefirstplatform.clientsdk.android.logger.api.Logger;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AppIdentity;
 import com.ibm.mobilefirstplatform.clientsdk.android.security.api.AuthorizationManager;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.api.DeviceIdentity;
+import com.ibm.mobilefirstplatform.clientsdk.android.security.api.UserIdentity;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -105,6 +108,21 @@ public class SSOAuthorizationManager implements AuthorizationManager {
 	@Override
 	public void clearAuthorizationData () {
 		BMSClient.getInstance().getCookieManager().getCookieStore().removeAll();
+	}
+
+	@Override
+	public UserIdentity getUserIdentity () {
+		return null;
+	}
+
+	@Override
+	public DeviceIdentity getDeviceIdentity () {
+		return null;
+	}
+
+	@Override
+	public AppIdentity getAppIdentity () {
+		return null;
 	}
 
 }
