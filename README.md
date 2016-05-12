@@ -1,1 +1,1 @@
-# bms-clientsdk-android-ssoauthmanager
+THIS PROJECT IS DISCONTINUED AND WILL BE REMOVED SOON.
